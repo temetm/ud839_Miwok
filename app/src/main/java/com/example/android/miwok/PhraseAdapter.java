@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class PhraseAdapter extends ArrayAdapter<Phrase> {
+public class PhraseAdapter extends ArrayAdapter<Word> {
 
-    public PhraseAdapter(Activity context, ArrayList<Phrase> listA) {
+    public PhraseAdapter(Activity context, ArrayList<Word> listA) {
         super(context, 0, listA);
     }
 
@@ -26,7 +26,7 @@ public class PhraseAdapter extends ArrayAdapter<Phrase> {
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
-        Phrase currentPhrase = getItem(position);
+        Word currentPhrase = getItem(position);
 
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         miwokTextView.setText(currentPhrase.getMiwokTranslation());

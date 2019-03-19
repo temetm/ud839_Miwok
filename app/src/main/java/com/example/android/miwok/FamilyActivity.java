@@ -29,17 +29,17 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Family> relatives = new ArrayList<Family>();
-        relatives.add(new Family("father", "әpә"));
-        relatives.add(new Family("mother", "әṭa"));
-        relatives.add(new Family("son", "angsi"));
-        relatives.add(new Family("daughter", "tune"));
-        relatives.add(new Family("older brother", "taachi"));
-        relatives.add(new Family("younger brother", "chalitti"));
-        relatives.add(new Family("older sister", "teṭe"));
-        relatives.add(new Family("younger sister", "kolliti"));
-        relatives.add(new Family("grandfather", "paapa"));
-        relatives.add(new Family("grandmother", "ama"));
+        ArrayList<Word> relatives = new ArrayList<Word>();
+        relatives.add(new Word("father", "әpә", R.mipmap.family_father));
+        relatives.add(new Word("mother", "әṭa", R.mipmap.family_mother));
+        relatives.add(new Word("son", "angsi", R.mipmap.family_son));
+        relatives.add(new Word("daughter", "tune", R.mipmap.family_daughter));
+        relatives.add(new Word("older brother", "taachi", R.mipmap.family_older_brother));
+        relatives.add(new Word("younger brother", "chalitti", R.mipmap.family_younger_brother));
+        relatives.add(new Word("older sister", "teṭe", R.mipmap.family_older_sister));
+        relatives.add(new Word("younger sister", "kolliti", R.mipmap.family_younger_sister));
+        relatives.add(new Word("grandfather", "paapa", R.mipmap.family_grandfather));
+        relatives.add(new Word("grandmother", "ama", R.mipmap.family_grandmother));
 
         FamilyAdapter adapter = new FamilyAdapter(this, relatives);
         ListView listView = (ListView) findViewById(R.id.list);

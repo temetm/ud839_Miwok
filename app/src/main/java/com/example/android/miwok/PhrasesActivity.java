@@ -29,17 +29,17 @@ public class PhrasesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Phrase> Phrases = new ArrayList<Phrase>();
-        Phrases.add(new Phrase("Where are you going?", "minto wuksus"));
-        Phrases.add(new Phrase("What is your name?", "tinnә oyaase'nә"));
-        Phrases.add(new Phrase("My name is...", "oyaaset..."));
-        Phrases.add(new Phrase("How are you feeling?", "michәksәs?"));
-        Phrases.add(new Phrase("I’m feeling good.", "kuchi achit"));
-        Phrases.add(new Phrase("Are you coming?", "әәnәs'aa?"));
-        Phrases.add(new Phrase("Yes, I’m coming.", "hәә’ әәnәm"));
-        Phrases.add(new Phrase("I’m coming.", "әәnәm"));
-        Phrases.add(new Phrase("Let’s go.", "yoowutis"));
-        Phrases.add(new Phrase("Come here.", "әnni'nem"));
+        ArrayList<Word> Phrases = new ArrayList<Word>();
+        Phrases.add(new Word("Where are you going?", "minto wuksus"));
+        Phrases.add(new Word("What is your name?", "tinnә oyaase'nә"));
+        Phrases.add(new Word("My name is...", "oyaaset..."));
+        Phrases.add(new Word("How are you feeling?", "michәksәs?"));
+        Phrases.add(new Word("I’m feeling good.", "kuchi achit"));
+        Phrases.add(new Word("Are you coming?", "әәnәs'aa?"));
+        Phrases.add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
+        Phrases.add(new Word("I’m coming.", "әәnәm"));
+        Phrases.add(new Word("Let’s go.", "yoowutis"));
+        Phrases.add(new Word("Come here.", "әnni'nem"));
 
         PhraseAdapter adapter = new PhraseAdapter(this, Phrases);
         ListView listView = (ListView) findViewById(R.id.list);

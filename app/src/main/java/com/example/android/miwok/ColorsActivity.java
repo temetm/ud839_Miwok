@@ -15,9 +15,11 @@
  */
 package com.example.android.miwok;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Adapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -29,6 +31,9 @@ public class ColorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
+        ListView listLayout = (ListView) findViewById(R.id.list);
+        listLayout.setBackgroundColor(getResources().getColor(R.color.category_colors));
+
         ArrayList<Word> colors = new ArrayList<Word>();
         colors.add(new Word("red", "weṭeṭṭi", R.mipmap.color_red));
         colors.add(new Word("green", "chokokki", R.mipmap.color_green));
@@ -39,7 +44,7 @@ public class ColorsActivity extends AppCompatActivity {
         colors.add(new Word("dusty yellow", "ṭopiisә", R.mipmap.color_dusty_yellow));
         colors.add(new Word("mustard yellow", "chiwiiṭә", R.mipmap.color_mustard_yellow));
 
-        ColorAdapter adapter = new ColorAdapter(this, colors);
+        WordAdapter adapter = new WordAdapter(this, colors);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 

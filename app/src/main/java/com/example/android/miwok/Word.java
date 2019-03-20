@@ -6,7 +6,8 @@ public class Word {
     /** Miwok translation for the word */
     private String mMiwokTranslation;
     /** Picture ID for this object */
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+    private static final int NO_IMAGE_PROVIDED = -1;
     /**
      * Create a new Word object. two constructors available depends of arguments
      */
@@ -29,4 +30,5 @@ public class Word {
     public int getPictureID() {
         return mImageResourceId;
     }
+    public boolean hasImage() { return mImageResourceId != NO_IMAGE_PROVIDED; }
 }

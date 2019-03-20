@@ -20,4 +20,7 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <color name="list_text">#FFFFFF</color>
+    <color name="list_picture_bckgrnd">#FFF7DA</color>
 </resources>

@@ -29,6 +29,9 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
+        ListView listLayout = (ListView) findViewById(R.id.list);
+        listLayout.setBackgroundColor(getResources().getColor(R.color.category_family));
+
         ArrayList<Word> relatives = new ArrayList<Word>();
         relatives.add(new Word("father", "әpә", R.mipmap.family_father));
         relatives.add(new Word("mother", "әṭa", R.mipmap.family_mother));
@@ -41,7 +44,7 @@ public class FamilyActivity extends AppCompatActivity {
         relatives.add(new Word("grandfather", "paapa", R.mipmap.family_grandfather));
         relatives.add(new Word("grandmother", "ama", R.mipmap.family_grandmother));
 
-        FamilyAdapter adapter = new FamilyAdapter(this, relatives);
+        WordAdapter adapter = new WordAdapter(this, relatives);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 

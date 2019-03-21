@@ -31,9 +31,6 @@ public class ColorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ListView listLayout = (ListView) findViewById(R.id.list);
-        listLayout.setBackgroundColor(getResources().getColor(R.color.category_colors));
-
         ArrayList<Word> colors = new ArrayList<Word>();
         colors.add(new Word("red", "weṭeṭṭi", R.mipmap.color_red));
         colors.add(new Word("green", "chokokki", R.mipmap.color_green));

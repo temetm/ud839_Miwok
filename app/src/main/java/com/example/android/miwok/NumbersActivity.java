@@ -29,9 +29,6 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ListView listLayout = (ListView) findViewById(R.id.list);
-        listLayout.setBackgroundColor(getResources().getColor(R.color.category_numbers));
-
         ArrayList<Word> numbers = new ArrayList<Word>();
         numbers.add(new Word("one", "lutti", R.mipmap.number_one));
         numbers.add(new Word("two", "otiiko", R.mipmap.number_two));

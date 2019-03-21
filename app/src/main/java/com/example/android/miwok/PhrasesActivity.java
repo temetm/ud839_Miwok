@@ -29,9 +29,6 @@ public class PhrasesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ListView listLayout = (ListView) findViewById(R.id.list);
-        listLayout.setBackgroundColor(getResources().getColor(R.color.category_phrases));
-
         ArrayList<Word> Phrases = new ArrayList<Word>();
         Phrases.add(new Word("Where are you going?", "minto wuksus"));
         Phrases.add(new Word("What is your name?", "tinnә oyaase'nә"));

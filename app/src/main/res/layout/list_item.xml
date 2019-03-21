@@ -3,23 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/list_picture"
-        android:layout_width="48dp"
-        android:layout_height="48dp" />
+        style="@style/ListImageStyle"
+        android:id="@+id/list_picture"/>
     <LinearLayout
+        android:id="@+id/textLayoutField"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
         android:orientation="vertical">
         <TextView
             style="@style/ListMiwokTextStyle"
             android:id="@+id/miwok_text_view"
+            android:layout_weight="1"
             tools:text="lutti"/>
         <TextView
             style="@style/ListDefTextStyle"
             android:id="@+id/default_text_view"
+            android:layout_weight="1"
             tools:text="one"/>
     </LinearLayout>
 </LinearLayout>

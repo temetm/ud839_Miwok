@@ -18,18 +18,27 @@
     </style>
     <style name="ListMiwokTextStyle">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">bottom</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:textColor">@color/list_text</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="ListDefTextStyle">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">top</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:textColor">@color/list_text</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="ListImageStyle">
+        <item name="android:layout_width">@dimen/list_item_height</item>
+        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/list_text</item>
+        <item name="android:background">@color/list_picture_bckgrnd</item>
     </style>
 
 </resources>

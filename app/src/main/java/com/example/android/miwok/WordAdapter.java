@@ -32,16 +32,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
         Word currentWordObject = getItem(position);
 
-        LinearLayout listLayoutColor = (LinearLayout) convertView.findViewById(R.id.textLayoutField);
-        listLayoutColor.setBackgroundColor(mColorId);
+        int color = ContextCompat.getColor(getContext(), mColorId);
+
+        LinearLayout listLayoutColor = (LinearLayout) convertView.findViewById(R.id.listRootLayout);
+        listLayoutColor.setBackgroundColor(color);
 
         TextView miwokTextView = (TextView) convertView.findViewById(R.id.miwok_text_view);
         miwokTextView.setText(currentWordObject.getMiwokTranslation());
-        miwokTextView.setBackgroundColor(mColorId);
+        miwokTextView.setBackgroundColor(color);
 
         TextView defaultTextView = (TextView) convertView.findViewById(R.id.default_text_view);
         defaultTextView.setText(currentWordObject.getDefaultTranslation());
-        defaultTextView.setBackgroundColor(mColorId);
+        defaultTextView.setBackgroundColor(color);
 
         ImageView wordImage = (ImageView) convertView.findViewById(R.id.list_picture);
         if (currentWordObject.hasImage()){

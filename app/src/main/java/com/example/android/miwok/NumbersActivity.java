@@ -30,16 +30,16 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> numbers = new ArrayList<Word>();
-        numbers.add(new Word("one", "lutti", R.mipmap.number_one));
-        numbers.add(new Word("two", "otiiko", R.mipmap.number_two));
-        numbers.add(new Word("three", "tolookosu", R.mipmap.number_three));
-        numbers.add(new Word("four", "oyyisa", R.mipmap.number_four));
-        numbers.add(new Word("five", "massokka", R.mipmap.number_five));
-        numbers.add(new Word("six", "temmokka", R.mipmap.number_six));
-        numbers.add(new Word("seven", "kenekaku", R.mipmap.number_seven));
-        numbers.add(new Word("eight", "kawinta", R.mipmap.number_eight));
-        numbers.add(new Word("nine", "wo’e", R.mipmap.number_nine));
-        numbers.add(new Word("ten", "na’aacha", R.mipmap.number_ten));
+        numbers.add(new Word("one", "lutti", R.raw.number_one, R.mipmap.number_one));
+        numbers.add(new Word("two", "otiiko", R.raw.number_two, R.mipmap.number_two));
+        numbers.add(new Word("three", "tolookosu", R.raw.number_three, R.mipmap.number_three));
+        numbers.add(new Word("four", "oyyisa", R.raw.number_four, R.mipmap.number_four));
+        numbers.add(new Word("five", "massokka", R.raw.number_five, R.mipmap.number_five));
+        numbers.add(new Word("six", "temmokka", R.raw.number_six, R.mipmap.number_six));
+        numbers.add(new Word("seven", "kenekaku", R.raw.number_seven, R.mipmap.number_seven));
+        numbers.add(new Word("eight", "kawinta", R.raw.number_eight, R.mipmap.number_eight));
+        numbers.add(new Word("nine", "wo’e", R.raw.number_nine, R.mipmap.number_nine));
+        numbers.add(new Word("ten", "na’aacha", R.raw.number_ten, R.mipmap.number_ten));
 
         WordAdapter adapter = new WordAdapter(this, numbers, R.color.category_numbers);
         ListView listView = (ListView) findViewById(R.id.list);

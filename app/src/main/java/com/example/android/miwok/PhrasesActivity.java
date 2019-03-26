@@ -30,16 +30,16 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> Phrases = new ArrayList<Word>();
-        Phrases.add(new Word("Where are you going?", "minto wuksus"));
-        Phrases.add(new Word("What is your name?", "tinnә oyaase'nә"));
-        Phrases.add(new Word("My name is...", "oyaaset..."));
-        Phrases.add(new Word("How are you feeling?", "michәksәs?"));
-        Phrases.add(new Word("I’m feeling good.", "kuchi achit"));
-        Phrases.add(new Word("Are you coming?", "әәnәs'aa?"));
-        Phrases.add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
-        Phrases.add(new Word("I’m coming.", "әәnәm"));
-        Phrases.add(new Word("Let’s go.", "yoowutis"));
-        Phrases.add(new Word("Come here.", "әnni'nem"));
+        Phrases.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        Phrases.add(new Word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+        Phrases.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        Phrases.add(new Word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        Phrases.add(new Word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+        Phrases.add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        Phrases.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        Phrases.add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        Phrases.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        Phrases.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
         WordAdapter adapter = new WordAdapter(this, Phrases, R.color.category_phrases);
         ListView listView = (ListView) findViewById(R.id.list);

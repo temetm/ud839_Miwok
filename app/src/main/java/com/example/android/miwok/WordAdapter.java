@@ -2,6 +2,8 @@ package com.example.android.miwok;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -17,7 +19,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
+
     int mColorId = 0;
+    MediaPlayer mp;
     public WordAdapter(Activity context, ArrayList<Word> listA, int colorID) {
         super(context, 0, listA);
         mColorId = colorID;
@@ -30,7 +34,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
-        Word currentWordObject = getItem(position);
+        final Word currentWordObject = getItem(position);
 
         int color = ContextCompat.getColor(getContext(), mColorId);
 
@@ -52,6 +56,23 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }else {
             wordImage.setVisibility(View.GONE);
         }
+
+
+
+        //TextView numbers = (TextView) findViewById(R.id.numbers);
+        // Set a click listener on that View
+        listLayoutColor.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // to play audio code here
+                mp = MediaPlayer.create(getContext(),currentWordObject.getAudioId());
+                mp.start();
+            }
+        });
+
+
         return convertView;
     }
+
 }
